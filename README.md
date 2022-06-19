@@ -54,7 +54,7 @@ ansible-playbook -i example/hosts.ini playbooks/99.clean.yml -e "@example/config
 ```
 
 ### 离线安装kuboard
-
+```
 https://www.kuboard.cn/install/v3/install-in-k8s.html#%E5%AE%89%E8%A3%85
 安装kuboard需要给master节点打上 etcd的标签，否则启动不了
 kubectl label nodes k8s-master1 k8s.kuboard.cn/role=etcd
@@ -81,3 +81,4 @@ docker rmi eipwork/kuboard-agent:v3
 docker rmi eipwork/etcd-host:3.4.16-1
 docker rmi eipwork/kuboard:v3
 docker rmi questdb/questdb:6.0.5
+```
