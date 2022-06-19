@@ -1,6 +1,6 @@
-# 基于3.1.1修改eadown脚本中指定k8s安装版本
+### 基于3.1.1修改eadown脚本中指定k8s安装版本
 
-# 做免密
+### 做免密
 ```
 ssh-keygen -t rsa -C 'admin@admin.com' -f ~/.ssh/admin_id_rsa
 ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.8.121
@@ -9,8 +9,8 @@ ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.8.162
 ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.8.161
 ```
 
-# 如需要其他版本可复制 eadown 到可联网机器上执行以下命令
-# 下载默认为/etc/kubeasz/
+### 如需要其他版本可复制 eadown 到可联网机器上执行以下命令
+### 下载默认位置为/etc/kubeasz/
 ```
 #./eadown   -D
 ```
