@@ -60,6 +60,8 @@ https://www.kuboard.cn/install/v3/install-in-k8s.html#%E5%AE%89%E8%A3%85
 kubectl label nodes k8s-master1 k8s.kuboard.cn/role=etcd
 kubectl label nodes k8s-master2 k8s.kuboard.cn/role=etcd
 kubectl label nodes k8s-master3 k8s.kuboard.cn/role=etcd
+kubectl label node k8s-master3 kubernetes.io/role=master node-role.kubernetes.io/control-plane=master k8s.kuboard.cn/role=etcd --overwrite
+kubectl label node k8s-node1 kubernetes.io/role=node node-role.kubernetes.io/work=node  --overwrite
 
 ----------------------
 docker pull eipwork/kuboard-agent:v3
