@@ -82,3 +82,9 @@ docker rmi eipwork/etcd-host:3.4.16-1
 docker rmi eipwork/kuboard:v3
 docker rmi questdb/questdb:6.0.5
 ```
+### 让k8s集群具有拉取私有仓库的权限
+```
+kubectl create secret generic harbor-registry \
+    --from-file=.dockerconfigjson=/root/.docker/config.json \
+    --type=kubernetes.io/dockerconfigjson
+```
